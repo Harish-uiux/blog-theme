@@ -1,0 +1,743 @@
+/**
+ * BloglyPress Admin Styles
+ */
+
+/* Admin Variables */
+:root {
+    --bloglypress-admin-primary: #3857ff;
+    --bloglypress-admin-primary-dark: #2a44cc;
+    --bloglypress-admin-secondary: #15c9c9;
+    --bloglypress-admin-success: #4caf50;
+    --bloglypress-admin-warning: #ff9800;
+    --bloglypress-admin-danger: #f44336;
+    --bloglypress-admin-light: #f8f9fa;
+    --bloglypress-admin-dark: #343a40;
+    --bloglypress-admin-gray: #adb5bd;
+    --bloglypress-admin-border: #dee2e6;
+    --bloglypress-admin-background: #f8f9fa;
+    --bloglypress-admin-card-bg: #ffffff;
+    --bloglypress-admin-text: #495057;
+    --bloglypress-admin-text-light: #6c757d;
+    
+    --bloglypress-admin-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+    --bloglypress-admin-shadow: 0 .5rem 1rem rgba(0,0,0,.05);
+    --bloglypress-admin-shadow-lg: 0 1rem 3rem rgba(0,0,0,.075);
+    
+    --bloglypress-admin-border-radius: 8px;
+    --bloglypress-admin-transition: all 0.2s ease;
+}
+
+/* Admin Wrapper */
+.bloglypress-admin-wrapper {
+    margin: 20px 20px 0 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: var(--bloglypress-admin-text);
+    max-width: 1400px;
+}
+
+/* Admin Header */
+.bloglypress-admin-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: var(--bloglypress-admin-card-bg);
+    padding: 20px;
+    border-radius: var(--bloglypress-admin-border-radius);
+    box-shadow: var(--bloglypress-admin-shadow);
+}
+
+.bloglypress-admin-logo {
+    margin-right: 20px;
+}
+
+.bloglypress-admin-logo img {
+    width: auto;
+    height: 40px;
+    display: block;
+}
+
+.bloglypress-admin-title {
+    flex: 1;
+}
+
+.bloglypress-admin-title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--bloglypress-admin-dark);
+}
+
+.bloglypress-admin-subtitle {
+    margin: 5px 0 0;
+    color: var(--bloglypress-admin-text-light);
+    font-size: 15px;
+}
+
+.bloglypress-admin-version {
+    font-size: 13px;
+    color: var(--bloglypress-admin-text-light);
+    background-color: var(--bloglypress-admin-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Admin Notices */
+.bloglypress-admin-notices {
+    margin-bottom: 20px;
+}
+
+.bloglypress-admin-notices .notice {
+    background-color: var(--bloglypress-admin-card-bg);
+    border-left: 4px solid var(--bloglypress-admin-primary);
+    box-shadow: var(--bloglypress-admin-shadow-sm);
+    padding: 15px;
+    margin: 0 0 15px;
+    border-radius: 0 var(--bloglypress-admin-border-radius) var(--bloglypress-admin-border-radius) 0;
+    position: relative;
+}
+
+.bloglypress-admin-notices .notice-success {
+    border-left-color: var(--bloglypress-admin-success);
+}
+
+.bloglypress-admin-notices .notice-error {
+    border-left-color: var(--bloglypress-admin-danger);
+}
+
+.bloglypress-admin-notices .notice-warning {
+    border-left-color: var(--bloglypress-admin-warning);
+}
+
+.bloglypress-admin-notices .notice p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Admin Content */
+.bloglypress-admin-content {
+    margin-bottom: 30px;
+}
+
+/* Admin Cards */
+.bloglypress-admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.bloglypress-admin-card {
+    background-color: var(--bloglypress-admin-card-bg);
+    border-radius: var(--bloglypress-admin-border-radius);
+    box-shadow: var(--bloglypress-admin-shadow);
+    overflow: hidden;
+    transition: var(--bloglypress-admin-transition);
+    margin-bottom: 25px;
+}
+
+.bloglypress-admin-card:hover {
+    box-shadow: var(--bloglypress-admin-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.bloglypress-admin-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--bloglypress-admin-primary);
+    color: white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.bloglypress-admin-card-icon .mdi {
+    font-size: 30px;
+}
+
+.bloglypress-admin-card-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--bloglypress-admin-border);
+    background-color: var(--bloglypress-admin-light);
+}
+
+.bloglypress-admin-card-header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--bloglypress-admin-dark);
+}
+
+.bloglypress-admin-card-body {
+    padding: 20px;
+}
+
+.bloglypress-admin-card-content {
+    flex: 1;
+}
+
+.bloglypress-admin-card-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bloglypress-admin-card-content p {
+    margin: 0 0 15px;
+    color: var(--bloglypress-admin-text-light);
+}
+
+/* Admin Boxes */
+.bloglypress-admin-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.bloglypress-admin-box {
+    background-color: var(--bloglypress-admin-card-bg);
+    border-radius: var(--bloglypress-admin-border-radius);
+    box-shadow: var(--bloglypress-admin-shadow);
+    padding: 20px;
+}
+
+.bloglypress-admin-box h2 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--bloglypress-admin-dark);
+}
+
+/* Admin Lists */
+.bloglypress-admin-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bloglypress-admin-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.bloglypress-admin-list li:last-child {
+    margin-bottom: 0;
+}
+
+.bloglypress-admin-list li .mdi {
+    color: var(--bloglypress-admin-success);
+    margin-right: 10px;
+}
+
+.bloglypress-admin-list li a {
+    color: var(--bloglypress-admin-primary);
+    text-decoration: none;
+    transition: var(--bloglypress-admin-transition);
+}
+
+.bloglypress-admin-list li a:hover {
+    color: var(--bloglypress-admin-primary-dark);
+    text-decoration: underline;
+}
+
+.bloglypress-admin-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.bloglypress-admin-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bloglypress-admin-features li .mdi {
+    color: var(--bloglypress-admin-success);
+    margin-right: 10px;
+}
+
+/* Admin Fields */
+.bloglypress-admin-field {
+    margin-bottom: 25px;
+}
+
+.bloglypress-admin-field:last-child {
+    margin-bottom: 0;
+}
+
+.bloglypress-admin-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.bloglypress-admin-field-label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.bloglypress-admin-field-description {
+    margin: 8px 0 0;
+    color: var(--bloglypress-admin-text-light);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.bloglypress-admin-field-toggle {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bloglypress-admin-field-toggle .bloglypress-admin-field-label {
+    flex: 1;
+    margin-right: 15px;
+    min-width: 150px;
+}
+
+.bloglypress-admin-field-toggle .bloglypress-admin-field-description {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Form Elements */
+.bloglypress-admin-input,
+.bloglypress-admin-select,
+.bloglypress-admin-textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--bloglypress-admin-border);
+    border-radius: var(--bloglypress-admin-border-radius);
+    background-color: var(--bloglypress-admin-card-bg);
+    color: var(--bloglypress-admin-text);
+    font-size: 14px;
+    line-height: 1.5;
+    transition: var(--bloglypress-admin-transition);
+}
+
+.bloglypress-admin-input:focus,
+.bloglypress-admin-select:focus,
+.bloglypress-admin-textarea:focus {
+    border-color: var(--bloglypress-admin-primary);
+    box-shadow: 0 0 0 2px rgba(56, 87, 255, 0.25);
+    outline: none;
+}
+
+.bloglypress-admin-code-editor {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 13px;
+}
+
+/* Toggle Switch */
+.bloglypress-admin-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin: 0;
+}
+
+.bloglypress-admin-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bloglypress-admin-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bloglypress-admin-gray);
+    transition: var(--bloglypress-admin-transition);
+    border-radius: 34px;
+}
+
+.bloglypress-admin-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: var(--bloglypress-admin-transition);
+    border-radius: 50%;
+}
+
+.bloglypress-admin-toggle input:checked + .bloglypress-admin-toggle-slider {
+    background-color: var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-toggle input:focus + .bloglypress-admin-toggle-slider {
+    box-shadow: 0 0 1px var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-toggle input:checked + .bloglypress-admin-toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Image Choices */
+.bloglypress-admin-image-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.bloglypress-admin-image-choice {
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+}
+
+.bloglypress-admin-image-choice input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bloglypress-admin-image-choice img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--bloglypress-admin-border);
+    border-radius: var(--bloglypress-admin-border-radius);
+    transition: var(--bloglypress-admin-transition);
+}
+
+.bloglypress-admin-image-choice span {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--bloglypress-admin-text);
+}
+
+.bloglypress-admin-image-choice input:checked + img {
+    border-color: var(--bloglypress-admin-primary);
+    box-shadow: 0 0 0 2px var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-image-choice.active img {
+    border-color: var(--bloglypress-admin-primary);
+    box-shadow: 0 0 0 2px var(--bloglypress-admin-primary);
+}
+
+/* Color Schemes */
+.bloglypress-admin-color-schemes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bloglypress-admin-color-scheme {
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bloglypress-admin-color-scheme-preview {
+    height: 40px;
+    border-radius: var(--bloglypress-admin-border-radius);
+    overflow: hidden;
+    display: flex;
+}
+
+.bloglypress-admin-color-scheme-preview span {
+    flex: 1;
+    height: 100%;
+}
+
+.bloglypress-admin-color-scheme-label {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Typography Preview */
+.bloglypress-admin-typography-preview {
+    background-color: var(--bloglypress-admin-light);
+    padding: 20px;
+    border-radius: var(--bloglypress-admin-border-radius);
+}
+
+.preview-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.preview-body {
+    margin-bottom: 15px;
+}
+
+.preview-body:last-child {
+    margin-bottom: 0;
+}
+
+/* Performance Report */
+.bloglypress-admin-performance-report {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.bloglypress-admin-performance-score {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.bloglypress-admin-performance-circle {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.circular-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    stroke: var(--bloglypress-admin-primary);
+}
+
+.percentage {
+    fill: var(--bloglypress-admin-primary);
+    font-size: 0.5em;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+.bloglypress-admin-performance-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex: 1;
+}
+
+.bloglypress-admin-metric {
+    background-color: var(--bloglypress-admin-light);
+    padding: 15px;
+    border-radius: var(--bloglypress-admin-border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.bloglypress-admin-metric-label {
+    font-size: 14px;
+    color: var(--bloglypress-admin-text-light);
+    margin-bottom: 5px;
+}
+
+.bloglypress-admin-metric-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--bloglypress-admin-dark);
+}
+
+.bloglypress-admin-performance-tips {
+    margin-top: 20px;
+}
+
+.bloglypress-admin-performance-tips h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bloglypress-admin-performance-tips ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.bloglypress-admin-performance-tips li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bloglypress-admin-performance-tips li .mdi {
+    color: var(--bloglypress-admin-success);
+    margin-right: 8px;
+}
+
+/* File Upload */
+.bloglypress-admin-file-upload {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.bloglypress-admin-file-upload input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bloglypress-admin-file-upload label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: var(--bloglypress-admin-light);
+    border: 2px dashed var(--bloglypress-admin-border);
+    border-radius: var(--bloglypress-admin-border-radius);
+    transition: var(--bloglypress-admin-transition);
+    cursor: pointer;
+}
+
+.bloglypress-admin-file-upload:hover label {
+    border-color: var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-file-upload .mdi {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-file-upload .upload-text {
+    margin-bottom: 5px;
+}
+
+#bloglypress-import-file-name {
+    font-weight: 600;
+    color: var(--bloglypress-admin-primary);
+}
+
+/* Form Footer */
+.bloglypress-admin-form-footer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--bloglypress-admin-light);
+    border-radius: var(--bloglypress-admin-border-radius);
+}
+
+/* Buttons */
+.bloglypress-admin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--bloglypress-admin-light);
+    color: var(--bloglypress-admin-text);
+    border: 1px solid var(--bloglypress-admin-border);
+    border-radius: var(--bloglypress-admin-border-radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--bloglypress-admin-transition);
+    text-decoration: none;
+}
+
+.bloglypress-admin-button:hover {
+    background-color: #f1f3f5;
+}
+
+.bloglypress-admin-button .mdi {
+    margin-right: 8px;
+}
+
+.bloglypress-admin-button-primary {
+    background-color: var(--bloglypress-admin-primary);
+    color: white;
+    border-color: var(--bloglypress-admin-primary);
+}
+
+.bloglypress-admin-button-primary:hover {
+    background-color: var(--bloglypress-admin-primary-dark);
+    border-color: var(--bloglypress-admin-primary-dark);
+}
+
+.bloglypress-admin-button-danger {
+    background-color: var(--bloglypress-admin-danger);
+    color: white;
+    border-color: var(--bloglypress-admin-danger);
+}
+
+.bloglypress-admin-button-danger:hover {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .bloglypress-admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .bloglypress-admin-logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .bloglypress-admin-version {
+        margin-top: 10px;
+    }
+    
+    .bloglypress-admin-form-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .bloglypress-admin-button {
+        width: 100%;
+    }
+    
+    .bloglypress-admin-field-toggle {
+        flex-direction: column;
+    }
+    
+    .bloglypress-admin-field-toggle .bloglypress-admin-field-label {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    .bloglypress-admin-performance-report {
+        flex-direction: column;
+    }
+    
+    .bloglypress-admin-performance-score {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
