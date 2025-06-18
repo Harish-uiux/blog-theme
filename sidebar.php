@@ -2,9 +2,7 @@
 /**
  * The sidebar containing the main widget area
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package BloglyPress
+ * @package Hariharan
  */
 
 if (!is_active_sidebar('sidebar-1')) {

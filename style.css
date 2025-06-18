@@ -1,18 +1,141 @@
 /*
-Theme Name: BloglyPress
-Theme URI: https://www.pixelsmedialab.com/bloglypress
-Author: Hariharan Gandhimani
-Author URI: https://www.pixelsmedialab.com/
-Description: BloglyPress is a modern, feature-rich WordPress theme for bloggers and content creators. It features a fully customizable layout, advanced theme options, and powerful admin controls.
+Theme Name: Hariharan
+Theme URI: https://example.com/hariharan
+Author: Your Name
+Author URI: https://example.com
+Description: A modern, lightweight, and fully responsive WordPress theme.
 Version: 1.0.0
-Requires at least: 5.9
-Tested up to: 6.4
+Requires at least: 5.6
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: bloglypress
-Tags: blog, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Text Domain: hariharan
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-/* This file is intentionally left mostly empty.
-   Actual CSS is loaded from the /assets/css/ directory */
+/* Import stylesheets */
+@import url('assets/css/style.css');
+@import url('assets/css/dark-mode.css');
+/* Archive Layout */
+.archive-posts {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 576px) {
+    .archive-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .archive-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .has-sidebar .archive-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    margin-bottom: 0.5rem;
+}
+
+.archive-description {
+    color: var(--hariharan-text-color);
+    opacity: 0.8;
+}
+/* Mobile header actions */
+.mobile-actions {
+    display: none;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .mobile-actions {
+        display: flex;
+    }
+    
+    .desktop-actions {
+        display: none;
+    }
+    
+    /* Mobile action buttons */
+    .mobile-search-toggle,
+    .mobile-dark-mode-toggle,
+    .mobile-menu-toggle {
+        background: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+        color: var(--hariharan-text-color, #333333);
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .mobile-search-toggle:hover,
+    .mobile-dark-mode-toggle:hover,
+    .mobile-menu-toggle:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    [data-theme="dark"] .mobile-search-toggle:hover,
+    [data-theme="dark"] .mobile-dark-mode-toggle:hover,
+    [data-theme="dark"] .mobile-menu-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Header layout adjustments */
+    .header-layout-centered .site-branding {
+        text-align: left;
+        max-width: 60%;
+        justify-content: flex-start;
+    }
+}
+
+/* Centered header layout - Desktop */
+@media (min-width: 992px) {
+    .header-layout-centered .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .header-layout-centered .site-branding {
+        margin: 0 0 1rem;
+        max-width: none;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .header-layout-centered .navigation-wrapper {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .header-layout-centered .main-navigation {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header-layout-centered .main-navigation ul {
+        justify-content: center;
+    }
+    
+    .header-layout-centered .header-actions {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
